@@ -1,0 +1,3002 @@
+{
+    "0001": {
+        "Name": "Router Principal",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.10.68",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0002": {
+        "Name": "Switch Capa 3",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.3",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.21.3",
+                "SSH": false
+            }
+        },
+        "Status": "Activo"
+    },
+    "0003": {
+        "Name": "Access Point",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.4",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.21.4",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.22.4",
+                "SSH": true
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0004": {
+        "Name": "Firewall",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.5",
+                "SSH": false
+            }
+        },
+        "Status": "Activo"
+    },
+    "0005": {
+        "Name": "Servidor DNS",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.6",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.21.6",
+                "SSH": true
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0006": {
+        "Name": "Servidor DHCP",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.7",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.21.7",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.22.7",
+                "SSH": false
+            }
+        },
+        "Status": "Activo"
+    },
+    "0007": {
+        "Name": "Balanceador de carga",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.8",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0008": {
+        "Name": "Modem de fibra óptica",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.9",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.21.9",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0009": {
+        "Name": "Switch PoE",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.10",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.21.10",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.22.10",
+                "SSH": true
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0010": {
+        "Name": "Servidor Proxy",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.11",
+                "SSH": false
+            }
+        },
+        "Status": "Activo"
+    },
+    "0011": {
+        "Name": "Router Principal 2",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.12",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.21.12",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0012": {
+        "Name": "Switch Capa 3 2",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.13",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.21.13",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.22.13",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0013": {
+        "Name": "Access Point 2",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.14",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0014": {
+        "Name": "Firewall 2",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.15",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.21.15",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0015": {
+        "Name": "Servidor DNS 2",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.16",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.21.16",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.22.16",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0016": {
+        "Name": "Servidor DHCP 2",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.17",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0017": {
+        "Name": "Balanceador de carga 2",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.18",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.21.18",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0018": {
+        "Name": "Modem de fibra óptica 2",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.19",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.21.19",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.22.19",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0019": {
+        "Name": "Switch PoE 2",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.20",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0020": {
+        "Name": "Servidor Proxy 2",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.21",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.21.21",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0021": {
+        "Name": "Router Principal 3",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.22",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.21.22",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.22.22",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0022": {
+        "Name": "Switch Capa 3 3",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.23",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0023": {
+        "Name": "Access Point 3",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.24",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.21.24",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0024": {
+        "Name": "Firewall 3",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.25",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.21.25",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.22.25",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0025": {
+        "Name": "Servidor DNS 3",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.26",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0026": {
+        "Name": "Servidor DHCP 3",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.27",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.21.27",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0027": {
+        "Name": "Balanceador de carga 3",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.28",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.21.28",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.22.28",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0028": {
+        "Name": "Modem de fibra óptica 3",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.29",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0029": {
+        "Name": "Switch PoE 3",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.30",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.21.30",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0030": {
+        "Name": "Servidor Proxy 3",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.31",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.21.31",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.22.31",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0031": {
+        "Name": "Router Principal 4",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.32",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0032": {
+        "Name": "Switch Capa 3 4",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.33",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.21.33",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0033": {
+        "Name": "Access Point 4",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.34",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.21.34",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.22.34",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0034": {
+        "Name": "Firewall 4",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.35",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0035": {
+        "Name": "Servidor DNS 4",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.36",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.21.36",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0036": {
+        "Name": "Servidor DHCP 4",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.37",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.21.37",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.22.37",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0037": {
+        "Name": "Balanceador de carga 4",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.38",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0038": {
+        "Name": "Modem de fibra óptica 4",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.39",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.21.39",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0039": {
+        "Name": "Switch PoE 4",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.40",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.21.40",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.22.40",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0040": {
+        "Name": "Servidor Proxy 4",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.41",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0041": {
+        "Name": "Router Principal 5",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.42",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.21.42",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0042": {
+        "Name": "Switch Capa 3 5",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.43",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.21.43",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.22.43",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0043": {
+        "Name": "Access Point 5",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.44",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0044": {
+        "Name": "Firewall 5",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.45",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.21.45",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0045": {
+        "Name": "Servidor DNS 5",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.46",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.21.46",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.22.46",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0046": {
+        "Name": "Servidor DHCP 5",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.47",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0047": {
+        "Name": "Balanceador de carga 5",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.48",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.21.48",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0048": {
+        "Name": "Modem de fibra óptica 5",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.49",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.21.49",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.22.49",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0049": {
+        "Name": "Switch PoE 5",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.50",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0050": {
+        "Name": "Servidor Proxy 5",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.51",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.21.51",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0051": {
+        "Name": "Router Principal 6",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.52",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.21.52",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.22.52",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0052": {
+        "Name": "Switch Capa 3 6",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.53",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0053": {
+        "Name": "Access Point 6",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.54",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.21.54",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0054": {
+        "Name": "Firewall 6",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.55",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.21.55",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.22.55",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0055": {
+        "Name": "Servidor DNS 6",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.56",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0056": {
+        "Name": "Servidor DHCP 6",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.57",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.21.57",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0057": {
+        "Name": "Balanceador de carga 6",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.58",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.21.58",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.22.58",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0058": {
+        "Name": "Modem de fibra óptica 6",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.59",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0059": {
+        "Name": "Switch PoE 6",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.60",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.21.60",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0060": {
+        "Name": "Servidor Proxy 6",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.61",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.21.61",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.22.61",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0061": {
+        "Name": "Router Principal 7",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.62",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0062": {
+        "Name": "Switch Capa 3 7",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.63",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.21.63",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0063": {
+        "Name": "Access Point 7",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.64",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.21.64",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.22.64",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0064": {
+        "Name": "Firewall 7",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.65",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0065": {
+        "Name": "Servidor DNS 7",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.66",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.21.66",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0066": {
+        "Name": "Servidor DHCP 7",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.67",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.21.67",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.22.67",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0067": {
+        "Name": "Balanceador de carga 7",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.68",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0068": {
+        "Name": "Modem de fibra óptica 7",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.69",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.21.69",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0069": {
+        "Name": "Switch PoE 7",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.70",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.21.70",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.22.70",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0070": {
+        "Name": "Servidor Proxy 7",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.71",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0071": {
+        "Name": "Router Principal 8",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.72",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.21.72",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0072": {
+        "Name": "Switch Capa 3 8",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.73",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.21.73",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.22.73",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0073": {
+        "Name": "Access Point 8",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.74",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0074": {
+        "Name": "Firewall 8",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.75",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.21.75",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0075": {
+        "Name": "Servidor DNS 8",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.76",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.21.76",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.22.76",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0076": {
+        "Name": "Servidor DHCP 8",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.77",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0077": {
+        "Name": "Balanceador de carga 8",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.78",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.21.78",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0078": {
+        "Name": "Modem de fibra óptica 8",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.79",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.21.79",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.22.79",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0079": {
+        "Name": "Switch PoE 8",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.80",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0080": {
+        "Name": "Servidor Proxy 8",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.81",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.21.81",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0081": {
+        "Name": "Router Principal 9",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.82",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.21.82",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.22.82",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0082": {
+        "Name": "Switch Capa 3 9",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.83",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0083": {
+        "Name": "Access Point 9",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.84",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.21.84",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0084": {
+        "Name": "Firewall 9",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.85",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.21.85",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.22.85",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0085": {
+        "Name": "Servidor DNS 9",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.86",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0086": {
+        "Name": "Servidor DHCP 9",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.87",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.21.87",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0087": {
+        "Name": "Balanceador de carga 9",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.88",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.21.88",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.22.88",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0088": {
+        "Name": "Modem de fibra óptica 9",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.89",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0089": {
+        "Name": "Switch PoE 9",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.90",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.21.90",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0090": {
+        "Name": "Servidor Proxy 9",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.91",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.21.91",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.22.91",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0091": {
+        "Name": "Router Principal 10",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.92",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0092": {
+        "Name": "Switch Capa 3 10",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.20.93",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.21.93",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0093": {
+        "Name": "Access Point 10",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": true,
+                "IP": "192.168.20.94",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.21.94",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.22.94",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0094": {
+        "Name": "Firewall 10",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": false,
+                "IP": "192.168.20.95",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0095": {
+        "Name": "Servidor DNS 10",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": true,
+                "IP": "192.168.20.96",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.21.96",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0096": {
+        "Name": "Servidor DHCP 10",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": false,
+                "IP": "192.168.20.97",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.21.97",
+                "SSH": false
+            },
+            "VL3": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.22.97",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0097": {
+        "Name": "Balanceador de carga 10",
+        "Protocolos": [
+            "RIP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": true,
+                "IP": "192.168.20.98",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0098": {
+        "Name": "Modem de fibra óptica 10",
+        "Protocolos": [
+            "BGP",
+            "OSPF",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    22,
+                    8080
+                ],
+                "Policies": "Video",
+                "ET": false,
+                "IP": "192.168.20.99",
+                "SSH": false
+            },
+            "VL2": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.21.99",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0099": {
+        "Name": "Switch PoE 10",
+        "Protocolos": [
+            "EIGRP",
+            "STP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    5000
+                ],
+                "Policies": "Management",
+                "ET": true,
+                "IP": "192.168.20.100",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.21.100",
+                "SSH": true
+            },
+            "VL3": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.22.100",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    },
+    "0100": {
+        "Name": "Servidor Proxy 10",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "VRRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    443,
+                    8443
+                ],
+                "Policies": "Guest",
+                "ET": false,
+                "IP": "192.168.20.101",
+                "SSH": false
+            }
+        },
+        "Status": "Inactivo"
+    },
+    "0101": {
+        "Name": "Router Principal 11",
+        "Protocolos": [
+            "OSPF",
+            "STP",
+            "IEGRP"
+        ],
+        "VLANs": {
+            "VL1": {
+                "Ports": [
+                    8080
+                ],
+                "Policies": "Voice",
+                "ET": true,
+                "IP": "192.168.20.102",
+                "SSH": true
+            },
+            "VL2": {
+                "Ports": [
+                    80,
+                    443
+                ],
+                "Policies": "Data",
+                "ET": false,
+                "IP": "192.168.21.102",
+                "SSH": true
+            }
+        },
+        "Status": "Activo"
+    }
+}
